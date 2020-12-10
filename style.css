@@ -1,0 +1,460 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.flex {
+    display: flex;
+}
+
+#wrapper {
+    width: 90%;
+    margin: auto;
+}
+
+h2, h3 {
+    text-transform: uppercase;
+}
+
+.iphone {
+    display: none;
+}
+
+/*header*/
+
+header {
+    width: 100%;
+    align-items: flex-end;
+}
+/***  /!\ Mettre une dimension au a qui contient l'image et mettre l'image à 100%. Le flex fonctionnera nickel
+header img {
+    width: 50%;
+}
+
+nav {
+    justify-content: space-between;
+    /*fonctionne pas*/
+    /* flex-direction: column; mais celui fonctionne, pourquoi?*/
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    padding: 1em 4em;
+}
+
+nav a:hover {
+    background-color: rgb(116, 183, 27);
+    color: white;
+}
+
+/*section gpu*/
+
+#gpu {
+    width: 100%;
+}
+
+figure {
+    width: 100%;
+    height: 349px;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+figure img {
+    width: 100%;
+    transform: translate(0, -30%);
+}
+
+figcaption {
+    background-color: rgb(0, 100, 0, 0.7);
+    justify-content: space-between;
+    padding-left: 1em;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+figcaption p {
+    color: white;
+    font-family: sans-serif;
+    padding-top: 3px;
+}
+
+button {
+    background-color: rgb(116, 183, 27);
+    border: 0;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 0.5em;
+    cursor: pointer;
+    margin: 0.5em;
+    padding: 0 6px 2px 10px;
+    height: 40px;
+}
+
+button:hover {
+    background-color: white;
+    color: rgb(116, 183, 27);
+}
+
+/*section puissance*/
+
+#puissance {
+    width: 100%;
+    margin-top: 1.5em;
+    font-family: sans-serif;
+    border-bottom: solid 3px rgb(116, 183, 27);
+}
+
+article img {
+    width: 25px;
+    height: 25px;
+    margin-top: 21px;
+}
+
+h2 {
+    font-size: 26px;
+}
+
+article {
+    width: 65%;
+    text-align: left;
+    padding: 0.5em 2em 0 0;
+}
+
+aside {
+    width: 35%;
+    background-color: rgb(116, 183, 27);
+    padding: 0.5em 2em 2em 2em;
+    color: white;
+    flex-direction: column;
+    align-items: center;
+}
+
+aside img {
+    width: 40%;
+}
+
+.text {
+    margin-top: 20px;
+}
+
+aside a {
+    color: white;
+}
+
+aside a:hover {
+    color: black;
+}
+
+aside i {
+    padding: 100px 20px 0 20px;
+    font-size: 35px;
+}
+
+/*Arrow down*/
+
+#arrow {
+    width: 32px;
+    height: 20px;
+    background-color: rgb(116, 183, 27);
+    margin: -1px 0 0 650px;
+    clip-path: polygon(100% 0, 0 0, 50% 100%);
+}
+
+/*footer*/
+
+footer div {
+    text-align: left;
+    padding: 2em 0 4em 1em;
+}
+
+footer div {
+    width: 33%;
+}
+
+h3 {
+    font-family: sans-serif;
+}
+
+#formulaire {
+    padding-left: 0;
+}
+
+form {
+    margin-top: 2em;
+}
+
+input {
+    margin-bottom: 0.5em;
+    border: solid 1.5px grey;
+    color: grey;
+    height: 40px;
+    padding-left: 1em;
+    padding-right: 3em;
+}
+
+#button {
+    background-color: rgb(116, 183, 27);
+    border: 0;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0 1.5em;
+    height: 35px;
+}
+
+#gallerie {
+    width: 45%;
+}
+
+#gallerie img {
+    width: 18%;
+    margin-right: 4px;
+}
+
+#partenaire {
+    padding-left: 0;
+}
+
+#partenaire img {
+    margin-right: 20px;
+    width: 25%;
+}
+
+#intel {
+    margin-bottom: 15px;
+}
+
+#asus {
+    margin-bottom: 30px;
+}
+
+/*IPHONE X PORTRAIT*/
+
+@media screen and (max-width: 375px) {
+    header img {
+        width: 40%;
+    }
+    nav {
+        display: none;
+    }
+    figure {
+        height: auto;
+        overflow: initial;
+    }
+    figure img {
+        position: initial;
+        margin-top: -30px;
+        clip-path: inset(40px 0 40px 0);
+    }
+    #puissance {
+        margin-top: 0;
+        flex-wrap: wrap;
+        border-bottom: initial;
+    }
+    figcaption {
+        font-size: 13px;
+        background-color: rgb(0, 100, 0, 1);
+        height: 40px;
+    }
+    .normal {
+        display: none;
+    }
+    .iphone {
+        display: initial;
+        margin-top: 10px;
+        font-weight: bold;
+    }
+    button {
+        font-size: 13px;
+        margin: 0 5px 2px 5px;
+    }
+    p {
+        text-align: justify;
+    }
+    article {
+        width: 100%;
+        padding-right: 0;
+    }
+    article img {
+        margin: 0;
+    }
+    article h2 {
+        margin: 0;
+    }
+    aside {
+        width: 100%;
+    }
+    aside i {
+        padding: 50px 10px 0 10px;
+        font-size: 30px;
+    }
+    #arrow {
+        margin-left: 155px;
+    }
+    footer {
+        flex-wrap: wrap;
+    }
+    footer div {
+        width: 100%;
+    }
+    #formulaire {
+        padding-left: 0;
+    }
+    #gallerie {
+        width: 100%;
+        padding: 0;
+    }
+    #gallerie img {
+        width: 100%;
+        flex-wrap: nowrap;
+    }
+    #gallerie :nth-child(odd).test {
+        display: none;
+    }
+    #partenaire {
+        padding: 0 0 2em 0;
+    }
+    #partenaire img {
+        padding-left: 1.5em;
+        width: 30%;
+    }
+}
+    /*IPHONE X PAYSAGE*/
+    @media screen and (min-width: 769px) and (max-width: 812px) {
+        header img {
+            width: 50%;
+        }
+        nav {
+            padding-bottom: 0;
+        }
+        nav a {
+            font-size: 14px;
+            padding: 1em;
+        }
+        figure {
+            overflow: visible;
+            height: 300px;
+        }
+        figure img {
+            margin-top: -140px;
+            clip-path: inset(120px 0 0 0);
+        }
+        figcaption {
+            margin-top: -60px;
+        }
+        #puissance {
+            margin-top: 0;
+            flex-wrap: wrap;
+        }
+        article {
+            width: 100%;
+        }
+        aside {
+            width: 100%;
+        }
+        aside img {
+            width: 25%;
+        }
+        aside i {
+            padding: 50px 20px 0 20px;
+        }
+        #arrow {
+            margin-left: 270px;
+        }
+    }
+    /*IPAD PORTRAIT*/
+    @media screen and (min-width:376px) and (max-width: 768px) {
+        header img {
+            width: 50%;
+        }
+        nav {
+            padding-bottom: 0;
+        }
+        nav a {
+            font-size: 14px;
+            padding: 0.5em;
+        }
+        figure {
+            overflow: visible;
+            height: 300px;
+        }
+        figure img {
+            margin-top: -140px;
+            clip-path: inset(120px 0 0 0);
+        }
+        figcaption {
+            margin-top: -60px;
+        }
+        #puissance {
+            margin-top: 0;
+            flex-wrap: wrap;
+        }
+        article {
+            width: 100%;
+        }
+        aside {
+            width: 100%;
+        }
+        aside img {
+            width: 25%;
+        }
+        aside i {
+            padding: 50px 20px 0 20px;
+        }
+        #arrow {
+            margin-left: 260px;
+        }
+    }
+    /*IPAD PAYSAGE*/
+    @media screen and (min-width: 813px) and (max-width: 1024px) {
+        header {
+            margin-bottom: -22px;
+        }
+        nav {
+            padding-bottom: 5px;
+        }
+        nav a {
+            font-size: 18px;
+            padding: 1em;
+        }
+        figure {
+            overflow: hidden;
+            height: 300px;
+        }
+        figure img {
+            margin-top: -160px;
+            clip-path: inset(0 0 0 0);
+        }
+        figcaption {
+            margin-top: -140px;
+        }
+        #puissance {
+            margin-top: 0;
+            flex-wrap: wrap;
+            border-bottom: none;
+        }
+        article {
+            width: 100%;
+        }
+        aside {
+            width: 100%;
+        }
+        aside img {
+            width: 25%;
+        }
+        #arrow {
+            margin-left: 310px;
+        }
+    }
